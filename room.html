@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Номер — Гостиница «Сугд»</title>
+<meta name="description" content="Категории номеров гостиницы «Сугд» в Худжанде: фото, удобства и условия. Бронирование по WhatsApp.">
+<meta name="theme-color" content="#17150F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ac:#6E2231;--acd:#551824;--bg:#F3EFE6;--dark:#17150F;--card:#E9E2D5;--ink:#211E1B;--mut:#6C665E;--rose:#C98A96}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Golos Text',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--ac)}
+input,textarea,button,select{font:inherit;color:inherit}
+::selection{background:var(--ac);color:var(--bg)}
+h1,h2,h3{font-family:'Prata',Georgia,serif;font-weight:400}
+
+@keyframes sugdFade{from{opacity:0}to{opacity:1}}
+@keyframes sugdImg{from{opacity:.35}to{opacity:1}}
+@keyframes sugdRise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes sugdWord{from{opacity:0;transform:translateY(105%)}to{opacity:1;transform:none}}
+@keyframes sugdVeil{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 0 100% 0)}}
+@keyframes sugdZoom{from{transform:scale(1)}to{transform:scale(1.1)}}
+@media (prefers-reduced-motion: reduce){*{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
+
+.veil{position:fixed;inset:0;z-index:200;background:var(--dark);pointer-events:none;animation:sugdVeil .95s .1s cubic-bezier(.76,0,.24,1) both}
+
+header{position:fixed;top:0;left:0;right:0;z-index:70;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px clamp(20px,5vw,64px);background:linear-gradient(180deg,rgba(23,21,15,.55),rgba(23,21,15,0));border-bottom:1px solid transparent;color:#F3EFE6;backdrop-filter:blur(14px);transition:padding .45s cubic-bezier(.16,1,.3,1),background .45s,border-color .45s,color .45s}
+header.is-scrolled{padding:12px clamp(20px,5vw,64px);background:rgba(243,239,230,.94);border-bottom-color:rgba(33,30,27,.13);color:var(--ink)}
+.hdr-logo{display:flex;flex-direction:column;gap:4px;flex:none;line-height:1}
+.hdr-logo b{font-family:'Prata',Georgia,serif;font-size:24px;font-weight:400;letter-spacing:.3em}
+.hdr-logo span{display:block;margin-top:4px;font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;opacity:.6}
+.hdr-back{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;opacity:.85}
+.hdr-back:hover{color:inherit;opacity:1}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ac);color:#F3EFE6;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:16px 26px;border:none;cursor:pointer;transition:background .4s,transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s}
+.btn:hover{background:var(--acd);color:#F3EFE6;transform:translateY(-3px);box-shadow:0 18px 30px -18px rgba(23,21,15,.8)}
+.hdr-book{padding:14px 24px;flex:none}
+
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+.kicker{display:block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:500}
+
+/* hero */
+.rhero{position:relative;min-height:88svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--dark)}
+.rhero-media{position:absolute;top:-8%;left:0;right:0;height:116%;overflow:hidden;will-change:transform}
+.rhero-media img{width:100%;height:100%;object-fit:cover;animation:sugdImg .6s ease,sugdZoom 26s ease-in-out infinite alternate;transition:opacity .35s ease}
+.rhero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,21,15,.62) 0%,rgba(23,21,15,.08) 32%,rgba(23,21,15,.5) 70%,rgba(23,21,15,.92) 100%)}
+.rhero-inner{position:relative;z-index:2;width:100%;max-width:1320px;margin:0 auto;padding:clamp(96px,14vh,150px) clamp(20px,5vw,64px) clamp(26px,4vh,44px);color:#F3EFE6;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:clamp(24px,4vw,48px)}
+.rhero-info{flex:1 1 420px;min-width:0}
+.rhero-info .kicker{color:rgba(243,239,230,.72);animation:sugdRise .9s .85s cubic-bezier(.16,1,.3,1) both}
+.rhero-info h1{font-size:clamp(38px,6vw,96px);line-height:1.03;letter-spacing:-.015em;margin:18px 0 0;max-width:18ch;text-wrap:balance;overflow:hidden}
+.rhero-info h1 span{display:inline-block;animation:sugdWord 1.15s .95s cubic-bezier(.16,1,.3,1) both}
+.rhero-meta{margin-top:22px;font-size:14px;color:rgba(243,239,230,.85);animation:sugdRise .9s 1.15s cubic-bezier(.16,1,.3,1) both}
+
+.rhero-gallery{flex:0 1 auto;display:flex;flex-direction:column;gap:12px;align-items:flex-start;animation:sugdRise 1s 1.3s cubic-bezier(.16,1,.3,1) both}
+.gallery-btn{display:flex;align-items:center;gap:10px;background:rgba(243,239,230,.92);color:var(--ink);border:none;cursor:pointer;font-size:11.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:13px 20px}
+.gallery-btn:hover{background:#F3EFE6;color:var(--ink)}
+.thumb-row{display:flex;gap:8px;overflow-x:auto;max-width:min(100%,420px);padding-bottom:4px;scroll-snap-type:x mandatory}
+.thumb{flex:none;width:78px;height:58px;padding:0;border:1px solid rgba(243,239,230,.28);background:none;cursor:pointer;overflow:hidden;opacity:.55;scroll-snap-align:start;transition:opacity .3s,border-color .3s}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb:hover{opacity:1}
+.thumb.active{opacity:1;border-color:#F3EFE6}
+
+/* lightbox */
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(17,15,11,.97);display:flex;flex-direction:column;animation:sugdFade .3s ease}
+.lightbox[hidden]{display:none}
+.lb-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px clamp(16px,4vw,40px);color:rgba(243,239,230,.8);flex:none}
+.lb-top span{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+.lb-top .pos{font-variant-numeric:tabular-nums}
+.lb-close{background:none;border:none;color:#F3EFE6;font-size:32px;line-height:1;cursor:pointer;padding:0 4px}
+.lb-mid{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;gap:clamp(8px,2vw,24px);padding:0 clamp(10px,3vw,32px)}
+.lb-mid img{max-width:100%;max-height:100%;object-fit:contain}
+.lb-nav{flex:none;width:46px;height:46px;border:1px solid rgba(243,239,230,.3);background:none;color:#F3EFE6;cursor:pointer;font-size:18px}
+.lb-nav:hover{background:rgba(243,239,230,.12);color:#F3EFE6}
+.lb-thumbs{flex:none;display:flex;gap:8px;justify-content:center;overflow-x:auto;padding:18px clamp(16px,4vw,40px)}
+.lb-thumb{flex:none;width:74px;height:54px;padding:0;border:1px solid rgba(243,239,230,.24);background:none;cursor:pointer;overflow:hidden;opacity:.55;transition:opacity .3s,border-color .3s}
+.lb-thumb img{width:100%;height:100%;object-fit:cover}
+.lb-thumb:hover{opacity:1}
+.lb-thumb.active{opacity:1;border-color:var(--ac)}
+.lb-hint{flex:none;text-align:center;padding:0 20px 20px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,239,230,.4)}
+
+/* body */
+.rbody{padding:clamp(64px,10vh,120px) 0;background:var(--bg)}
+.rbody .wrap{display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,84px);align-items:flex-start}
+.rmain{flex:1 1 420px;min-width:0}
+.rmain .kicker{color:var(--ac)}
+.rmain .desc{margin:22px 0 0;font-size:clamp(17px,1.5vw,22px);line-height:1.6;max-width:46ch}
+.amen-block{margin-top:clamp(40px,5vh,64px);padding-top:22px;border-top:1px solid rgba(33,30,27,.14)}
+.amen-block .t{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--mut)}
+.amen-list{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:14px 28px}
+.amen-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px}
+.amen-list svg{width:14px;height:14px;flex:none;margin-top:5px}
+
+.photo-strip{margin-top:clamp(40px,5vh,64px);display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.6vw,18px)}
+@media (max-width:619px){.photo-strip{grid-template-columns:repeat(2,1fr)}}
+.strip-item{padding:0;border:none;background:#E9E2D5;cursor:pointer;overflow:hidden;display:block;position:relative;min-width:0}
+.strip-item img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.3s cubic-bezier(.16,1,.3,1)}
+.strip-item .ov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(23,21,15,.42);color:#F3EFE6;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;opacity:0;transition:opacity .4s}
+.strip-item:hover img{transform:scale(1.06)}
+.strip-item:hover .ov{opacity:1}
+
+.rside{flex:0 1 360px;min-width:280px;position:sticky;top:110px;background:var(--card);padding:clamp(26px,3vw,38px)}
+.rside .t{font-size:10px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--mut)}
+.rside .price{margin-top:12px;font-family:'Prata',Georgia,serif;font-size:clamp(26px,2.6vw,36px);line-height:1.15}
+.rside .note{margin:14px 0 0;font-size:14px;color:var(--mut)}
+.rside .rows{display:flex;flex-direction:column;gap:2px;margin-top:28px}
+.rside .rows>div{display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-top:1px solid rgba(33,30,27,.14);font-size:14px}
+.rside .rows span:first-child{color:var(--mut)}
+.rside .row{display:flex;flex-wrap:wrap;gap:22px;margin-top:26px}
+.rside .row label{flex:1 1 130px;display:flex;flex-direction:column;gap:8px}
+.rside span.lbl{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--mut)}
+.rside input{background:none;border:none;border-bottom:1px solid rgba(33,30,27,.26);padding:6px 0;font-size:15px;outline:none;width:100%}
+.rside .btn{width:100%;margin-top:28px}
+.rside .addr{margin-top:16px;font-size:12.5px;color:var(--mut);text-align:center}
+
+/* other rooms */
+.others{padding:clamp(64px,10vh,120px) 0;background:var(--card)}
+.others-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px}
+.others-head h2{font-size:clamp(28px,3.4vw,52px);line-height:1.1;margin:18px 0 0}
+.others-head .kicker{color:var(--ac)}
+.others-head .all{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--ac);border-bottom:1px solid rgba(110,34,49,.4);padding-bottom:4px;transition:letter-spacing .5s,border-color .4s}
+.others-head .all:hover{letter-spacing:.2em;border-bottom-color:var(--ac);color:var(--ac)}
+.others-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,40px);margin-top:clamp(32px,4vh,52px)}
+@media (max-width:999px){.others-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:699px){.others-grid{grid-template-columns:1fr}}
+.others-grid .rcard{display:flex;flex-direction:column;min-width:0}
+.others-grid .media{position:relative;overflow:hidden;background:#DCD3C2}
+.others-grid .media img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.5s cubic-bezier(.16,1,.3,1)}
+.others-grid .ov{position:absolute;inset:0;display:flex;align-items:flex-end;padding:18px;background:linear-gradient(0deg,rgba(23,21,15,.78),rgba(23,21,15,0) 60%);color:#F3EFE6;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;opacity:0;transform:translateY(10px);transition:opacity .45s,transform .55s cubic-bezier(.16,1,.3,1)}
+.others-grid .rcard:hover .media img{transform:scale(1.06)}
+.others-grid .rcard:hover .ov{opacity:1;transform:none}
+.others-grid .rcard:hover .arrow{transform:translateX(8px)}
+.others-grid .kicker{margin-top:18px;font-size:10.5px;letter-spacing:.24em;color:var(--ac)}
+.others-grid h3{font-size:clamp(21px,1.8vw,28px);line-height:1.15;margin:12px 0 0}
+.others-grid p{margin:10px 0 0;font-size:14px;color:var(--mut);flex:1}
+.others-grid .foot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:18px;padding-top:14px;border-top:1px solid rgba(33,30,27,.14)}
+.others-grid .foot .price{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--mut)}
+.arrow{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--ac);transition:transform .5s cubic-bezier(.16,1,.3,1)}
+
+footer{background:var(--dark);color:rgba(243,239,230,.72);padding:clamp(48px,7vh,80px) 0 30px}
+.foot-row{display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-end}
+.foot-row .name{font-family:'Prata',Georgia,serif;font-size:28px;letter-spacing:.26em;color:#F3EFE6}
+.foot-row .sub{margin-top:8px;font-size:10px;letter-spacing:.26em;text-transform:uppercase;font-weight:500;color:rgba(243,239,230,.5)}
+.foot-row .btn-cream{background:#F3EFE6;color:var(--ink);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:16px 28px}
+.foot-row .btn-cream:hover{background:var(--ac);color:#F3EFE6}
+.foot-bottom{flex:1 1 100%;padding-top:22px;border-top:1px solid rgba(243,239,230,.14);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,239,230,.42)}
+</style>
+</head>
+<body>
+<div class="veil"></div>
+
+<header data-header>
+  <a href="index.html" class="hdr-logo"><b>СУГД</b><span>hotel · Худжанд</span></a>
+  <a href="index.html#rooms" class="hdr-back">← Все номера</a>
+  <a href="#" target="_blank" rel="noopener" class="btn hdr-book" id="hdrBookBtn">Забронировать</a>
+</header>
+
+<section class="rhero">
+  <div class="rhero-media" data-par="0.12">
+    <img id="mainImg" src="" alt="">
+  </div>
+  <div class="rhero-overlay"></div>
+  <div class="rhero-inner">
+    <div class="rhero-info">
+      <span class="kicker" id="roomCat"></span>
+      <h1><span id="roomTitle"></span></h1>
+      <div class="rhero-meta" id="roomMeta"></div>
+    </div>
+    <div class="rhero-gallery">
+      <button type="button" class="gallery-btn" id="galleryBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="width:15px;height:15px"><rect x="3" y="5" width="18" height="14" /><circle cx="8.5" cy="10" r="1.6" /><path d="M3 17l5.5-4.5L14 17l3.5-3 3.5 3" /></svg>
+        <span>Галерея · <span id="galleryCount"></span></span>
+      </button>
+      <div class="thumb-row" id="thumbStrip"></div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lb-top">
+    <span id="lbTitle"></span>
+    <span class="pos" id="lbPosition"></span>
+    <button type="button" class="lb-close" id="lbClose" aria-label="Закрыть">×</button>
+  </div>
+  <div class="lb-mid">
+    <button type="button" class="lb-nav" id="lbPrev" aria-label="Предыдущее фото">←</button>
+    <img id="lbImg" src="" alt="">
+    <button type="button" class="lb-nav" id="lbNext" aria-label="Следующее фото">→</button>
+  </div>
+  <div class="lb-thumbs" id="lbThumbs"></div>
+  <div class="lb-hint">Свайп или ← → · Esc — закрыть</div>
+</div>
+
+<section class="rbody">
+  <div class="wrap">
+    <div class="rmain">
+      <span class="kicker" data-rise>О номере</span>
+      <p class="desc" id="roomDesc" data-rise data-d="0.08"></p>
+
+      <div class="amen-block" data-rise data-d="0.16">
+        <div class="t">В номере</div>
+        <ul class="amen-list" id="amenList"></ul>
+      </div>
+
+      <div class="photo-strip" id="photoStrip"></div>
+    </div>
+
+    <div class="rside" data-rise data-d="0.1">
+      <div class="t">Стоимость</div>
+      <div class="price">Цена по запросу</div>
+      <p class="note">Зависит от дат и количества гостей. Подтверждаем в WhatsApp — обычно отвечаем в течение нескольких минут.</p>
+
+      <div class="rows">
+        <div><span>Гости</span><span id="sideGuests"></span></div>
+        <div><span>Спальные места</span><span id="sideBed"></span></div>
+        <div><span>Завтрак</span><span>Включён</span></div>
+        <div><span>Заезд</span><span>с 14:00</span></div>
+      </div>
+
+      <form class="row" id="sidebarForm">
+        <label>
+          <span class="lbl">Заезд</span>
+          <input type="date" data-checkin>
+        </label>
+        <label>
+          <span class="lbl">Выезд</span>
+          <input type="date" data-checkout>
+        </label>
+      </form>
+
+      <a href="#" target="_blank" rel="noopener" class="btn" id="waRoomBtn">Спросить про этот номер</a>
+      <div class="addr">ул. Исмоили Сомони, 179а · Худжанд</div>
+    </div>
+  </div>
+</section>
+
+<section class="others">
+  <div class="wrap">
+    <div class="others-head">
+      <div>
+        <span class="kicker" data-rise>Ещё в гостинице</span>
+        <h2 data-rise data-d="0.08">Другие категории</h2>
+      </div>
+      <a href="index.html#rooms" class="all" data-rise data-d="0.14">Все восемь →</a>
+    </div>
+    <div class="others-grid" id="otherRooms"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>
+      <div class="name">СУГД</div>
+      <div class="sub">hotel · ★★★ · Худжанд</div>
+    </div>
+    <a href="https://wa.me/992000000000?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%B3%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B8%D1%86%D1%8B%20%C2%AB%D0%A1%D1%83%D0%B3%D0%B4%C2%BB." target="_blank" rel="noopener" class="btn-cream">Написать в WhatsApp</a>
+    <span class="foot-bottom">© 2026 · Гостиница «Сугд» · ул. Исмоили Сомони, 179а · Худжанд</span>
+  </div>
+</footer>
+
+<script src="rooms.js"></script>
+<script src="room.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
